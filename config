@@ -26,7 +26,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 #custom keybindings a la Sch
-bindsym $mod+t exec gnome-terminal
+bindsym $mod+t exec konsole
 bindsym $mod+b exec firefox
 bindsym $mod+i exec xchat
 bindsym $mod+o exec ktorrent
