@@ -26,7 +26,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 #custom keybindings a la Sch
-bindsym $mod+t exec konsole
+bindsym $mod+t exec gnome-terminal
 bindsym $mod+b exec firefox
 bindsym $mod+i exec xchat
 bindsym $mod+o exec ktorrent
@@ -47,15 +47,14 @@ bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
 
-#custom
-bindsym Mod1+Tab focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+#custom
+bindsym Mod1+Tab focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
@@ -162,11 +161,24 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+  status_command i3status
 	position top
+  colors {
+    separator #dc322f
+    background #002b36
+    statusline #268bd2
+    focused_workspace #fdf6e3 #859900 #fdf6e3
+    active_workspace #fdf6e3 #6c71c4 #fdf6e3
+    inactive_workspace #586e75 #93a1a1 #002b36
+    urgent_workspace #d33682 #d33682 #fdf6e3
+  }
 }
 
 #autostarted apps
 exec qlipper
 exec kmix
-exec xinput disable 11
+
+client.focused #859900 #859900 #fdf6e3 #859900
+client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
+client.unfocused #073642 #073642 #93a1a1 #586e75
+client.urgent #d33682 #d33682 #fdf6e3 #dc322f
