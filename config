@@ -30,6 +30,7 @@ bindsym $mod+t exec konsole
 bindsym $mod+b exec firefox
 bindsym $mod+i exec xchat
 bindsym $mod+o exec ktorrent
+bindsym $mod+m exec thunderbird
 # kill focused window
 bindsym $mod+Shift+q kill
 
